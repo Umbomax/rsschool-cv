@@ -28,4 +28,4 @@ const findSquares = num => {
     let min2 = Math.pow(min, 2)
     return `${max2}-${min2}`;
 };
-``
+```
