@@ -109,6 +109,7 @@ li{
 }
 
 .work1{
+    padding-left: 10px;
     width: 420px;
     margin-right: auto;
 }
@@ -144,6 +145,11 @@ ul.exp>li{
 }
 
 .logo{
+    padding-top: 5px;
     padding-left: 20px;
-    margin-right: 290px;
+    margin-right: 250px;
+}
+.mygit{
+    text-align: end;
+    margin-left: 160px;
 }
