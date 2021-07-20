@@ -1,1 +1,1 @@
-# rsschool-cv
+https://umbamax.github.io/rsschool-cv/cv
