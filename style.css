@@ -1,0 +1,155 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    margin: auto;
+    width: 1000px;
+}
+
+li{
+    list-style-type:none; 
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-areas:"name name photo"
+                        "prof prof photo"
+                        "contacts contacts photo";
+    background-color: #f8460081;
+}
+
+.email{
+    margin-right: 150px;
+}
+
+.addres{
+    margin-right: 156px;
+}
+
+.photo{
+    grid-area: photo;
+    height: 375px;
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 0;
+}
+
+.name{
+    justify-self: center;
+    grid-area: name;
+    font-size: 77px;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.contacts{
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: contacts;
+}
+
+.prof{
+    grid-area: prof;
+    color: #0d7db9;
+    font-size: 40px;
+    justify-self: center;
+    align-self: flex-start;
+}
+/* Спрайты для контактов начало*/
+.icon-email{
+     background-position: -72px 0px;
+}
+
+.icon-phone{
+    background-position: -407px -24px;
+}
+
+.icon-addres{
+    background-position: -167px -72px;
+}
+
+.icon {
+    background-image: url(https://github.com/Umbamax/rsschool-cv/blob/rsschool-cv-html/Sprites.png?raw=true);
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    background-repeat: no-repeat;
+  }
+  /* Спрайты для контактов конец*/
+
+  /* Начало блока main*/
+  main{
+    text-align: center;
+    font-weight: 700;
+    font-size: larger;
+    background-image: url(https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRq_xb6um1tj7zfE-vdbEPog);
+  }
+
+  .about-me li{  
+    line-height: 55px;
+  }
+
+  .h2{
+    font-size: 48px;
+    padding-top: 5px;
+    margin:0;
+  }
+
+  .education{
+      font-size: 32px;
+  }
+
+.expirience{
+    display: flex;
+    text-align: start;
+}
+
+.work1{
+    padding-left: 10px;
+    width: 420px;
+    margin-right: auto;
+}
+
+.work2{
+    width: 420px;
+}
+
+ul.exp{
+    padding-left:0;
+}
+
+.work-name{
+    font-size: 27px;
+    font-weight: 800;
+    text-align: center;
+    list-style-type: none; 
+}
+
+ul.exp>li{
+    list-style-type: circle; 
+    margin-left: 40px;
+}
+
+.code{
+    text-align: start;
+    margin: 0;
+}
+
+.footer{
+    background-color: #f8460081;
+    display: flex;
+}
+
+.logo{
+    padding-top: 5px;
+    padding-left: 20px;
+    margin-right: 250px;
+}
+.mygit{
+    text-align: end;
+    margin-left: 160px;
+}
