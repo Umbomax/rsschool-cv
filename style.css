@@ -200,10 +200,12 @@ main {
   font-size: 32px;
 }
 
+
 .expirience {
   display: flex;
   text-align: start;
-}
+
+
 
 .work1 {
   width: 420px;
@@ -379,6 +381,7 @@ details {
   
 }
 
+
 @media screen and (max-width: 440px) {
 
 .my-photo{
@@ -405,5 +408,4 @@ ul.about-me{
 .work1,
 .work2{
   width: auto;
-}
 }
