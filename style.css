@@ -1,155 +1,411 @@
-*{
-    font-family: 'Montserrat', sans-serif;
+* {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
-body{
-    margin: auto;
-    width: 1000px;
+body {
+  background-color: rgb(253, 245, 230);
+  margin: 0 auto 40px;
+  max-width: 1400px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-li{
-    list-style-type:none; 
+li {
+  list-style-type: none;
 }
 
-.header{
-    display: grid;
-    grid-template-columns: 1fr 1fr auto;
-    grid-template-areas:"name name photo"
-                        "prof prof photo"
-                        "contacts contacts photo";
-    background-color: #f8460081;
+.burger-menu-btn {
+  position: fixed;
+  z-index: 30;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: rgba(83, 83, 83, 0.8);
+}
+.burger-menu-btn:hover .burger-menu-lines {
+  filter: brightness(0.8);
+}
+.burger-menu-lines,
+.burger-menu-lines::after,
+.burger-menu-lines::before {
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background-color: white;
+}
+.burger-menu-lines {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.burger-menu-lines::before {
+  content: "";
+  top: -8px;
+}
+.burger-menu-lines::after {
+  content: "";
+  top: 8px;
+}
+.burger-menu-active .burger-menu-lines {
+  background-color: transparent;
+}
+.burger-menu-active .burger-menu-lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger-menu-active .burger-menu-lines::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.menu-link {
+  display: block;
+  padding: 30px;
+
+  font-family: sans-serif;
+  font-size: 26px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+.menu-link:hover {
+  filter: brightness(0.8);
+}
+ul.menu-list > li:last-child {
+  margin-bottom: 70px;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.burger-menu-active .overlay {
+  display: block;
+}
+.menu-body {
+  padding-top: 70px;
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  flex-flow: column;
+  height: auto;
+  background-color: rgba(34, 34, 34, 0.849);
+  overflow-y: auto;
+  left: -200%;
+}
+.burger-menu-active .menu-body {
+  left: auto;
+}
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  grid-template-areas:
+    "name name photo"
+    "prof prof photo"
+    "contacts contacts photo";
+  background-color: #f8460081;
 }
 
-.email{
-    margin-right: 150px;
+.email {
+  margin-right: 250px;
 }
 
-.addres{
-    margin-right: 156px;
+.addres {
+  margin-right: 235px;
 }
 
-.photo{
-    grid-area: photo;
-    height: 375px;
-    margin: 0;
-    padding-top: 40px;
-    padding-bottom: 0;
+.photo {
+  grid-area: photo;
+  height: 375px;
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 0;
 }
 
-.name{
-    justify-self: center;
-    grid-area: name;
-    font-size: 77px;
-    margin: 0;
-    padding-top: 5px;
+.name {
+  font-family: "Inconsolata", monospace;
+  letter-spacing: 4px;
+  justify-self: center;
+  grid-area: name;
+  font-size: 72px;
+  height: 75px;
+  margin: 0;
+  padding-top: 5px;
 }
 
-.contacts{
-    display: flex;
-    flex-wrap: wrap;
-    grid-area: contacts;
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: contacts;
 }
 
-.prof{
-    grid-area: prof;
-    color: #0d7db9;
-    font-size: 40px;
-    justify-self: center;
-    align-self: flex-start;
+.prof {
+  margin: 0;
+  grid-area: prof;
+  color: #0d7db9;
+  height: 75px;
+  font-size: 40px;
+  justify-self: center;
 }
 /* Спрайты для контактов начало*/
-.icon-email{
-     background-position: -72px 0px;
+.icon-email {
+  background-position: -72px 0px;
 }
 
-.icon-phone{
-    background-position: -407px -24px;
+.icon-phone {
+  background-position: -407px -24px;
 }
 
-.icon-addres{
-    background-position: -167px -72px;
+.icon-addres {
+  background-position: -167px -72px;
 }
 
 .icon {
-    background-image: url(https://github.com/Umbamax/rsschool-cv/blob/rsschool-cv-html/Sprites.png?raw=true);
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0 5px;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
-    background-repeat: no-repeat;
+  background-image: url(https://github.com/Umbamax/rsschool-cv/blob/rsschool-cv-html/Sprites.png?raw=true);
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+  background-repeat: no-repeat;
+}
+/* Спрайты для контактов конец*/
+
+/* Начало блока main*/
+main {
+  text-align: center;
+  font-weight: 700;
+  font-size: larger;
+  background-color: white;
+}
+
+.about-me li {
+  line-height: 55px;
+}
+
+.h2 {
+  font-size: 48px;
+  padding-top: 5px;
+  margin: 0;
+}
+
+.education {
+  font-size: 32px;
+}
+
+
+.expirience {
+  display: flex;
+  text-align: start;
+
+
+
+.work1 {
+  width: 420px;
+  margin-right: auto;
+}
+
+.work2 {
+  width: 420px;
+}
+
+ul.exp {
+  padding-left: 0;
+}
+
+.work-name {
+  font-size: 27px;
+  font-weight: 800;
+  text-align: center;
+  list-style-type: none;
+}
+
+ul.exp > li {
+  list-style-type: circle;
+  margin-left: 40px;
+}
+
+.language-javascript {
+  text-align: start;
+  margin: 0;
+  color: #545454;
+  font: 16px/19px sans-serif;
+}
+details {
+  margin: 35px 0 25px;
+}
+.code-viev {
+  height: 15px;
+  border: 1px solid black;
+}
+.my-projects {
+  display: flex;
+  justify-content: space-around;
+}
+.project {
+  padding: 10px;
+  margin: 15px;
+  background-color: #f7edde;
+  border: 3px solid black;
+  border-radius: 20% 10%;
+  width: 600px;
+  height: 700px;
+  box-shadow: inset 4px 3px 25px black;
+}
+
+.project-img {
+  width: 500px;
+}
+.footer {
+  background-color: #f8460081;
+  display: flex;
+}
+
+.logo {
+  padding-left: 20px;
+  margin-right: 290px;
+}
+
+@media (max-width: 1120px) {
+  body {
+    margin: 0 auto;
   }
-  /* Спрайты для контактов конец*/
-
-  /* Начало блока main*/
-  main{
-    text-align: center;
-    font-weight: 700;
-    font-size: larger;
-    background-image: url(https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRq_xb6um1tj7zfE-vdbEPog);
+  .my-projects {
+    align-self: center;
+    flex-direction: column;
   }
-
-  .about-me li{  
-    line-height: 55px;
+  .project {
+    margin: 20px auto;
   }
-
-  .h2{
-    font-size: 48px;
-    padding-top: 5px;
-    margin:0;
-  }
-
-  .education{
-      font-size: 32px;
-  }
-
-.expirience{
-    display: flex;
-    text-align: start;
 }
 
-.work1{
-    padding-left: 10px;
-    width: 420px;
-    margin-right: auto;
-}
-
-.work2{
-    width: 420px;
-}
-
-ul.exp{
-    padding-left:0;
-}
-
-.work-name{
-    font-size: 27px;
-    font-weight: 800;
-    text-align: center;
-    list-style-type: none; 
-}
-
-ul.exp>li{
-    list-style-type: circle; 
-    margin-left: 40px;
-}
-
-.code{
-    text-align: start;
-    margin: 0;
-}
-
-.footer{
+@media (max-width: 1040px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-areas:
+      "name name photo"
+      "prof prof photo"
+      "contacts contacts contacts";
     background-color: #f8460081;
-    display: flex;
+  }
+  ul.contacts {
+    height: 45px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-count: 2;
+    justify-content: space-between;
+  }
+  ul.contacts > li {
+    width: 50%;
+  }
+  .email {
+    margin-right: 0;
+  }
+  .vk {
+    margin-right: 30px;
+  }
+  .addres {
+    margin-right: 0;
+  }
+  .name {
+    font-size: 47px;
+  }
+  .prof {
+    font-size: 34px;
+  }
 }
 
-.logo{
-    padding-top: 5px;
-    padding-left: 20px;
-    margin-right: 250px;
+@media (max-width: 720px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .name {
+    order: 1;
+    font-size: 8vw;
+  }
+  .photo {
+    order: 2;
+    margin: 0;
+    padding: 0;
+  }
+  .prof {
+    order: 3;
+    font-size: 8vw;
+  }
+  .contacts {
+    order: 4;
+  }
+  .project-img{
+    width: calc(100vw - 80px);
+  }
+  .work1 {
+    margin: 0;
+  }
+  .contacts {
+    display: block;
+    padding: 0;
+  }
+  ul.contacts > li {
+    width: auto;
+    margin-bottom: 7px;
+  }
+  ul.contacts {
+    columns: unset;
+    height: auto;
+  }
+  div.expirience {
+    text-align: center;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project {
+    width: auto;
+    height: auto;
+  }
+
+    .logo{
+      margin-right: auto;
+    }
+  
 }
-.mygit{
-    text-align: end;
-    margin-left: 160px;
+
+
+@media screen and (max-width: 440px) {
+
+.my-photo{
+  height: 110vw;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.prof{
+  margin-top: 15px;
+}
+.h2{
+  font-size: 9vw;
+}
+ul.about-me{
+  font-size: 4vw;
+}
+.education{
+  font-size: 6vw;
+}
+.work-name{
+  font-size: 6vw;
+}
+.work1,
+.work2{
+  width: auto;
 }

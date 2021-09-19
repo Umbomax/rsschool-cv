@@ -1,70 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-savanna-dark.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+
     <title>CV</title>
-</head>
-<body>
-    <header class="header">    
+  </head>
+  <body>
+    <header>
+      <div class="burger-menu burger-menu-active">
+        <div class="burger-menu-btn change-vilibility">
+          <span class="burger-menu-lines"></span>
+        </div>
+
+           <nav class="menu-body">
+            <ul class="menu-list">
+              <li><a href="#" class="menu-link change-vilibility">Contacts</a></li>
+              <li><a href="#About" class="menu-link change-vilibility">About me</a></li>
+              <li><a href="#Education" class="menu-link change-vilibility">Education</a></li>
+              <li><a href="#Expirience" class="menu-link change-vilibility">Expirience</a></li>
+              <li><a href="#Example_of_code" class="menu-link change-vilibility">Example of code</a></li>
+              <li><a href="#My_projects" class="menu-link change-vilibility">My projects</a></li>
+            </ul>
+          </nav>
+
+          <div class="overlay change-vilibility"></div>
+      </div>
+    
+         
+        
+      <div class="header">
         <h1 class="name">Ilia Turovchik</h1>
         <h2 class="prof">Frontend Developer</h2>
         <ul class="contacts">
-            <li class="email"><span class="icon icon-email"></span>Umbomaxia@gmail.com</li>
-            <li class="phone"><span class="icon icon-phone"></span>+375447042594</li>
-            <li class="addres"><span class="icon icon-addres"></span>Brest, Kolesnika17, apt 17</li>
-            <li class="vk"><span class="icon icon-vk"></span><a href="https://vk.com/kekkekkek09" target="_blank">https://vk.com/kekkekkek09</a></li>
+          <li class="email">
+            <span class="icon icon-email"></span>Umbomaxia@gmail.com
+          </li>
+          <li class="phone">
+            <span class="icon icon-phone"></span>+375447042594
+          </li>
+          <li class="addres">
+            <span class="icon icon-addres"></span>Brest, Kolesnika17, apt 17
+          </li>
+          <li class="vk">
+            <span class="icon icon-vk"></span
+            ><a href="https://vk.com/kekkekkek09" target="_blank"
+              >https://vk.com/kekkekkek09</a
+            >
+          </li>
         </ul>
-        <div class="photo"><img src="https://github.com/Umbamax/rsschool-cv/blob/rsschool-cv-html/LbOUb_ovZf0%20(2)%D0%BA%D1%80%D1%83%D0%B3.png?raw=true" width="330" height="400" alt="My photo"></div>
-    </header>
-    <main>
-        <h2 class="h2">About me</h2>
-          <ul class="about-me">
-              <li>Winner of the regional olympiad in mathematics in 2010 year.</li>
-              <li>In <time datetime="2016-07-01T08:00:00">2016</time> had participant of the student program at the Joint Institute for Nuclear Research.</li>
-              <li>Went in for parachuting (Have 5 jumps).</li>
-              <li>English level: pre-intermediate (A2).</li>
-              <li>I have a beautiful wife and a baby son.</li>
-          </ul>
-          <h2 class="h2">Education</h2>
-          <p class="education">2012-2017 <a href="https://www.gstu.by/" target="_blank">Gomel State Technical University</a></p>
-          <h2 class="h2">Expirience</h2>
-          <div class="expirience">
-          <div class="work1">
-              <h3 class="work-name">2017-2019 Engineer in Politex</h3>
-              <ul class="exp">
-                  <li>Computer repair</li>
-                  <li>Sale of components</li>
-              </ul>
-        </div>
-        <div class="work2">
-              <h3 class="work-name">2019-2021 Engineer in GAI</h3>
-              <ul class="exp">
-                  <li>Adding new users in Windows serser</li>
-                  <li>Technical consultation of employees</li>
-                  <li>Did backup every monday</li>
-                  <li>Responses to citizens' appeals</li>
-                  <li>Was engaged in procurement</li>
-              </ul>
+        <div class="photo">
+          <img
+            src="https://github.com/Umbamax/rsschool-cv/blob/rsschool-cv-html/LbOUb_ovZf0%20(2)%D0%BA%D1%80%D1%83%D0%B3.png?raw=true"
+            width="330"
+            height="400"
+            alt="My photo"
+            class="my-photo"
+          />
         </div>
       </div>
-        <h2 class="h2">Example of code</h2>
-        <pre class="code"><code>
-            const findSquares = num => {
-            let min = num - Math.ceil(num / 2)
-            let max = num - Math.floor(num / 2)
-            let max2 = Math.pow(max, 2)
-            let min2 = Math.pow(min, 2)
-            return `${max2}-${min2}`;};
+    </header>
+    <main>
+      <h2 class="h2"id="About">About me</h2>
+      <ul class="about-me">
+        <li>Winner of the regional olympiad in mathematics in 2010 year.</li>
+        <li>
+          In <time datetime="2016-07-01T08:00:00">2016</time> had participant of
+          the student program at the Joint Institute for Nuclear Research.
+        </li>
+        <li>Went in for parachuting (Have 5 jumps).</li>
+        <li>English level: pre-intermediate (A2).</li>
+      </ul>
+      <h2 class="h2" id='Education'>Education</h2>
+      <p class="education">
+        2012-2017
+        <a href="https://www.gstu.by/" target="_blank"
+          >Gomel State Technical University</a
+        >
+      </p>
+      <h2 class="h2" id='Expirience'>Expirience</h2>
+      <div class="expirience">
+        <div class="work1">
+          <h3 class="work-name">2017-2019 Engineer in Politex</h3>
+          <ul class="exp">
+            <li>Computer repair</li>
+            <li>Sale of components</li>
+          </ul>
+        </div>
+        <div class="work2">
+          <h3 class="work-name">2019-2021 Engineer in GAI</h3>
+          <ul class="exp">
+            <li>Adding new users in Windows serser</li>
+            <li>Technical consultation of employees</li>
+            <li>Did backup every monday</li>
+            <li>Responses to citizens' appeals</li>
+            <li>Was engaged in procurement</li>
+          </ul>
+        </div>
+      </div>
+      <h2 class="h2" id='Example_of_code'>Example of code</h2>
+      <details>
+        <summary>Brackets</summary>
+        <pre class="code"><code class="language-javascript">
+        function check(str, bracketsConfig) {
+            let bracketsPairs = bracketsConfig.reduce(
+              (a, b) => ((a[b[0]] = b[1]), a),
+              {}
+            );
+            let stack = [];
+            for (let i = 0; i < str.length; i++) {
+              const brack = str[i];
+              if (brack == bracketsPairs[stack[stack.length - 1]]) {
+                stack.pop();
+              } else if (bracketsPairs[brack]) {
+                stack.push(brack);
+              } else {
+                return false;
+              }
+            }
+            return stack.length === 0;
+          };
         </code></pre>
+      </details>
+      <h2 class="h2" id='My_projects'>My projects</h2>
+      <div class="my-projects">
+        <div class="project">
+          <h4>Whack-a-mole</h4>
+          <h5>Description of the project</h5>
+          <p>
+            In this project with a random place, a point appears and moves in a
+            random direction, gradually increasing.Your task is to click on the
+            points. As soon as the 9th dot appears, you have lost.
+          </p>
+
+          <div class="screen-project">
+            <a
+              href="https://rolling-scopes-school.github.io/umbamax-JSFEPRESCHOOL/whack-a-mole/"
+              target="_blank"
+              ><img class="project-img" src="w-a-m.png" alt="whack-a-mole"
+            /></a>
+            <h5>New skills</h5>
+            <p>
+              In this project, I learned how to work with DOM audio and
+              localStorage.
+            </p>
+          </div>
+        </div>
+        <!-- 2 project -->
+        <div class="project">
+          <h4>JS-clock</h4>
+          <h5>Description of the project</h5>
+          <p>
+            In this project i made a watch on clean Javascript.A feature of this
+            project is the smooth scrolling of the second hand.
+          </p>
+          <div class="screen-project">
+            <a
+              href="https://rolling-scopes-school.github.io/umbamax-JSFEPRESCHOOL/js-clock/"
+              target="_blank"
+              ><img class="project-img" src="js-clock.PNG" alt="JS-clock"
+            /></a>
+            <h5>New skills</h5>
+            <p>
+              In this project, I learned how to work with data and used in
+              practice various methods of finding an element.
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
-        <a href="https://rs.school/js/" target="_blank"><img class="logo" src="https://rs.school/images/rs_school_js.svg" width="100" alt="logo rsschool"></a>
-        <p>© 2021 The Rolling Scopes</p>
-        <p class="mygit"><a href="https://github.com/Umbamax" target="_blank">https://github.com/Umbamax</a></p>
+
+      <a href="https://rs.school/js/" target="_blank"><img
+        class="logo"
+        src="https://rs.school/images/rs_school_js.svg"
+        width="100"
+        alt="logo rsschool"
+      /></a>
+      <p class="mygit"><a href="https://github.com/Umbamax" target="_blank">https://github.com/Umbamax</a></p>
+
     </footer>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
