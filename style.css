@@ -265,6 +265,7 @@ details {
 .footer {
   background-color: #f8460081;
   display: flex;
+  justify-content: space-around
 }
 
 .logo {
