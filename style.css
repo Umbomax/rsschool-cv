@@ -61,9 +61,9 @@ li {
 }
 .menu-link {
   display: block;
-  padding: 30px;
+  padding: 15px;
   font-family: sans-serif;
-  font-size: 26px;
+  font-size: 22px;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -321,6 +321,10 @@ details {
   .prof {
     font-size: 34px;
   }
+  .menu-link{
+    padding: 12px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -382,7 +386,13 @@ details {
      justify-content: space-between;
      font-size: 14px;
    }
-  
+   .menu-body{
+    padding-top: 30px;
+  }
+   .menu-link{
+    padding: 10px;
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 440px) {
@@ -412,8 +422,18 @@ ul.about-me{
 .work2{
   width: auto;
 }
-.menu-link{
-  padding: 20px;
-  font-size: 16px;
+.menu-body{
+  padding-top: 20px;
 }
+.menu-link{
+  padding: 6px;
+  font-size: 8px;
+}
+.burger-menu-lines,
+.burger-menu-lines::after,
+.burger-menu-lines::before {
+ 
+  width: 15px;
+  height: 2px;
+
 }
